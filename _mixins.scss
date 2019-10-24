@@ -1,0 +1,149 @@
+///base properties for layout
+/// '_'-suffix for extends
+/********
+! D I S P L A Y property **/
+
+%AsBlock_{
+    display: block;
+}
+
+%AsInline_{
+    display:inline-block;
+}
+
+%AsFlex_{
+    display: flex;
+}
+
+%AsInlineFlex_{
+    display: inline-flex;
+}
+
+%AsDispNone_{
+    display: none;
+}
+/*********************************
+! M A R G I N S **/
+
+%HorizAutoMargins_{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+%VertAlign_{
+    vertical-align: middle;
+}
+
+%NoVertMargins_{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+%NoHorizMargins_{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+
+/*********************************
+! P A D D I N G S**/
+
+%NoHorizPaddings_{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+%NoVertPaddings_{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+ 
+/********** W I D T H *****************/
+%FullWidth_{
+    width: 100%;
+}
+
+/*********** T E X T  - C E N T E R *****/
+%TextCenter_{
+    text-align: center;
+}
+
+%LineHeightStd_{
+    line-height: normal;
+}
+
+%TextNoDecor_{
+    text-decoration: none;
+}
+///******* P O S I T I O N  ***/
+%PosRelative_{
+    position: relative;
+}
+
+
+%PosFixed_{
+    position: fixed;
+}
+
+/***********F O N T *///
+%FontInherit_{
+    font-size: inherit;
+    font-family: inherit;
+    line-height: inherit;
+}
+
+%TextJustify_{
+    text-align:  justify;
+}
+/*****************************
+F L E X B O X properties***/
+
+%ColNowrap_{
+    flex-flow: column nowrap;
+} 
+
+%ColWrap_{
+    flex-flow: column wrap;
+} 
+
+%RowNowrap_{    
+    flex-flow: row nowrap;
+}
+
+%RowWrap_{ 
+     flex-flow: row wrap;
+}
+/******DEBUG ********/
+%BorderDbg_{
+    border: 1px dashed rgba(255,50,100,0.5);
+}
+/*************
+
+WIDTH\HEIGHT***********/
+%HeightAuto_{
+    height: auto;
+}
+
+%FullMaxWidth_{
+    max-width: 100%;
+}
+///----------C L E A R F I X (with img::after selector)- img must be an inline-block
+%Clearfix_{
+     content: "."; 
+     display: block; 
+     height: 0; 
+     clear: both; 
+     visibility: hidden;
+}
+
+///////////////////C U R S O R////
+%CursorPointer_{
+    cursor: pointer;
+}
+
+//////////////---M I X I N S-----------------//////
+@mixin RightLeftAuto{
+    margin-left: auto;
+    margin-right: auto;
+}

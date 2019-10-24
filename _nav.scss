@@ -1,0 +1,165 @@
+/******T O P navigation menu container*/
+.NavWrap{
+  @extend %AsBlock_;  
+  @extend %FullMaxWidth_;
+  z-index: 2;
+  @extend %PosFixed_;
+  max-width: 99%;
+    @extend %FullWidth_;
+    margin:0 auto;
+&>nav.MnuContainer{
+   
+   @extend %FullMaxWidth_; 
+    @extend %FullWidth_;
+    @extend %AsFlex_;  /*flexbox layout */
+    @extend %NoVertMargins_;
+    @extend %NoHorizMargins_;
+///PADINGS
+    padding: 1em 2em 1em 2em;
+    @extend %RowNowrap_;  /*flex-flow property*/
+    z-index: 2;
+    justify-content: space-between;
+    align-items: center;
+ /**************
+    properties of ALL the fexboxe`s items*/
+     &>*{
+        @extend %AsInline_;
+        @extend %VertAlign_;
+        height: auto;
+        margin: 0;
+        object-fit: fill;
+         //flex: 1 0.7 1;
+        }
+        ///********* hamburger mobile button*/
+        &>*:nth-of-type(2){
+        @extend %AsDispNone_;
+        }
+   /*HIDE the 3 item and  */
+        @media (max-width: 481px){
+        &>*:nth-of-type(3){
+            display: none;
+        }
+    /*SHOW the 2 item*/
+        &>*:nth-of-type(2){
+        display: block;
+        }
+        
+            }
+   
+    }
+    
+}
+
+/************
+THE LOGOTYPE*/
+img.logo{
+    display: inline-block;
+   width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+/*************
+FLEX DESKTOP menu container */
+
+ul.FlexNavPC{
+    @extend %AsFlex_;
+    @extend %RowNowrap_;
+    justify-content: stretch;
+    align-items: stretch;
+    width: auto;
+    list-style-type: none;
+    &> li{
+        flex: auto;
+         @extend %AsBlock_;
+         @extend %NoHorizMargins_;
+         @extend %NoHorizPaddings_;
+       
+        padding:  0;
+            &> a{
+                @extend %TextCenter_;
+                @extend %FullWidth_;
+                @extend %AsInline_;
+                @extend %VertAlign_;
+                 padding: 0.3em 0.4em;
+                 @extend %TextNoDecor_;
+                transition: color 0.5s, background-color 0.5s;
+  
+                }
+         }
+    /*****
+    PRI NAVEDENII MYSHY NA NECHETNYE ELEMENTY*/
+    &> li:nth-child(odd)>a:hover{
+          /*REFERENCE CHANGE COLOR on HOVER - ref to _font_color_.scss (row 13)*/    
+                color: $NavHoverPC;
+                background-color: $NavBkgPC;
+             
+    }
+ 
+}
+
+
+/* //M O B I L E   M E N U - hover mechanim with container //////*/
+
+.MobNav{
+        @extend %PosRelative_;
+    
+    &>*{
+        @extend %AsDispNone_;
+        top: 0;
+        left: 0;
+        padding-top: 1.5em;
+        @extend %PosFixed_;  
+        width: 100%;
+        float: left;
+        z-index: 10;
+            
+        }
+    
+ &:hover>*{  
+  @extend %AsInline_;
+   
+ 
+           }
+}
+
+/*   M O B I L E   M E N U - CORE (the dropdown part)********/
+
+.Dropdown{
+    @extend %AsFlex_;
+   @extend %ColNowrap_;
+     
+    justify-content: stretch;
+    align-items: stretch;
+   z-index: 100;
+    
+    &>li{
+    @extend %AsBlock_;
+    @extend %NoVertMargins_;
+    @extend %NoVertPaddings_;
+    @extend %NoHorizMargins_;
+    @extend %NoHorizPaddings_;
+    }
+    
+    &>li a{
+        list-style-type: none;
+         @extend %TextNoDecor_;
+        @extend %TextCenter_;
+       @extend %AsBlock_;
+        @extend %FullWidth_;
+        flex: 1;
+        padding: 0.7em;
+        border-bottom: 2px solid white; 
+        transition: color 0.5s, background-color 0.5s;
+    }
+    
+    &>li *:first-child{
+        border-top: 2px solid white; 
+    }
+    
+    &>li *:hover{
+        color: $DropdovnHoverColor;
+        background-color: $DropdownHoverBkg;
+    }
+}

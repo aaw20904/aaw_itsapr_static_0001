@@ -1,0 +1,215 @@
+ 
+//////////////H E R O - the first article 
+// use together with .hero-fnt-color-schema  
+.hero{
+     @extend %AsInline_;
+    @extend %TextJustify_;
+    
+    span{
+        font-style: italic;
+        letter-spacing: 0.2em;
+        }
+        
+    span.capital{
+        font-size: $HeroCapitalLetter;
+        margin: 0 0 0 2em;
+        letter-spacing: 0;
+        font-style: normal;
+        
+        @media (max-width: 480px){
+            margin-left: 0;
+        }
+        
+        }
+     margin-top: 4.6rem;////default top margin
+    /*************
+    media queries for the top margin*/
+    @media (max-width: 978px)  {
+         margin-top: 3.5rem;
+    }  
+
+        &>div{
+            max-width: 50%;
+         //   max-height: 100%;
+            float: right;
+            @extend %AsInline_;
+            padding: $HeroPadding; ///_variables.scss  
+            margin: $HeroImgMargins; ///_variables.scss
+             //L O G O
+            img{
+                @extend %FullMaxWidth_;
+                @extend %HeightAuto_;
+                width: 100%;
+                @extend %AsInline_;
+             }
+            &::after{
+                content: "."; 
+                display: block; 
+                height: 0; 
+                clear: both; 
+                visibility: hidden;
+            }
+         ///if there are a mobile device
+                @media (max-width: 480px){
+                float: none;
+                display: block;
+                max-width: 100%;
+                    width: 100%;
+                }
+ 
+            }
+    
+   
+
+}
+
+/*********
+
+A flex-container for products*/
+.GeneralFlex{
+     @extend %AsFlex_;
+     @extend %NoHorizMargins_;
+     @extend %NoVertMargins_;
+    @extend %RowWrap_;
+    @extend %FullWidth_;//because FLEX isn`t a block element
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    &>*{
+       ///base item properties
+        display: block;
+        margin: 0 auto;
+       // border: 1px dashed rgba(0,255,0,0.5);
+    }
+    /********
+    It`s made for two items in the flex container*/ 
+    &>.two-items{
+        /*****for a Desktop , 2 items next to other*/
+        flex:  1 0.8 33.3%;
+        //////if there is a mobile device - next under other
+        @media (max-width: 480px){
+                flex-basis: 90%;
+                }
+    }
+    
+    /********
+    It`s made for nine items in the flex container*/
+   &>.nine-items{
+         flex:  1 0.8 33.3%;
+  /*     @media (min-width: 480px ) and (max-width:768px){
+           flex-basis: 40%;
+       }*/
+      @media (max-width: 480px){
+                flex-basis: 100%;
+       }
+       
+    }
+
+}
+
+/**************************
+P R O D U C t - item**/
+
+.ProdItem{
+   
+   @extend %FullMaxWidth_;
+    height: auto;
+    @extend %AsInline_;///////
+    border: 2px solid 	#ccc;
+    background-color: $ProdItemBkg;
+    @extend %NoHorizPaddings_;
+    @extend %NoVertPaddings_;
+     margin: 1.5em auto;
+   //  box-shadow: 8px 7px 11px -1px rgba(0,0,0,0.75);
+    &>.wrp{
+        @extend %AsInline_;
+        /////////////////////////////
+        @extend %FullMaxWidth_;
+        @extend %FullWidth_;
+        ///////////
+        @extend %TextCenter_;
+        @extend %NoHorizPaddings_;
+        @extend %NoVertPaddings_;
+         object-fit: cover;
+        ///I M A G E styling
+         img{
+           @extend %AsBlock_;
+           @extend %FullMaxWidth_;
+           @extend %FullWidth_;
+           margin: 0 auto;
+           @extend %HeightAuto_;
+           object-fit: cover;
+           }
+            ///clearfix 
+            img::after{
+                    @extend %Clearfix_;
+            }
+        //B U T T T O N 
+        a{
+            @extend %AsInline_;
+            @extend %TextCenter_;
+            @extend %CursorPointer_;
+            @extend %TextNoDecor_;
+            margin: 1em 0 1em 0;
+            border-radius: 5px;
+            border: 2px solid $BtnProdBorder;
+            padding: 0.5em 1em;
+            transition: color 0.5s, background-color 0.5s;
+            color: $BtnProdColor;
+            background-color: $BtnProdBkg;
+            ///H O V E R 
+            &:hover{
+            color:  $BtnProdHoverColor;
+            background-color:  $BtnProdHoverBkg;
+                    }
+              }
+       }
+    
+    /********MEDIA Q U E R I E S for ProdItem*/
+     width: 26vw;//width over 768
+     @media (min-width: 480px ) and (max-width:1024px){
+    width: 35vw;
+    }
+    @media (max-width: 480px){
+        width: 90%;
+       }
+}
+
+
+/////simple paragraph/////
+
+p.simple{
+    @extend %TextJustify_;
+    @extend %AsInline_;
+    @extend %FullMaxWidth_;
+    @extend %FullWidth_;
+    @extend %NoHorizMargins_;
+    @extend %NoVertMargins_;
+    @extend %NoHorizPaddings_;
+    @extend %NoVertPaddings_;
+    &::first-letter{
+        margin-left:2em;
+    }
+    padding: 1em;
+}
+///simple L I S T ---////
+ul.simple{
+   border: 1px dashed rgba(255,0,0,0.2);
+    padding: 0 1em;
+    @extend %AsInline_;
+    @extend %FullMaxWidth_;
+    @extend %FullWidth_;
+    @extend %NoHorizMargins_;
+    @extend %NoVertMargins_;
+    @extend %NoHorizPaddings_;
+    @extend %NoVertPaddings_;
+    list-style-type: disc;
+    li{
+        margin: 0 auto 0.7em 2em;
+        list-style-position: outside;
+        display: list-item;
+        @extend %FullMaxWidth_;
+        @extend %TextJustify_;
+    
+    }
+}

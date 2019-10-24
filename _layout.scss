@@ -1,0 +1,203 @@
+
+
+////base wrapper and container (3 level)
+
+.GeneralWrapper{
+    /*****limitting the width in depending to
+    the broser`s width - like a rubber design*/ 
+    @extend %AsBlock_;
+   
+   // @extend %FullWidth_;
+   /* @extend %NoVertMargins_;*/
+    @extend %HorizAutoMargins_;
+    @extend %FullMaxWidth_;
+    @extend %NoVertPaddings_;
+    @extend %NoVertPaddings_;
+    /***********MAX W I D T H   LIMIT  S E T  **/
+  //  max-width: 1600px;
+    /****for DBG**/
+       border: 2px dashed rgba(255,0,0,0.1);
+    &> div{
+        /****for vertical align*/
+        @extend %FullWidth_;
+        @extend %AsInline_;
+        @extend %VertAlign_;
+        margin: 1em 0;
+        max-width: 100%;
+         /****for DeBuG**/
+      border: 2px dashed rgba(0,255,0,0.1);
+        &> div{
+            max-width: 100%;
+            /**for horiz align*/
+              width: auto;
+            @extend %AsBlock_;
+            @extend %TextCenter_;
+            margin: 0 1.5em;
+             /****for DeBuG**/
+             border: 2px dashed rgba(0,0,255,0.1);
+            ////////////////////////////
+            /***! PLACE content HERE!!*/
+            ///////////////////////////
+        }
+    }
+}
+////generat purpose HEADER 1
+h1.General{
+    @extend %AsBlock_;
+    @extend %TextCenter_;
+    @include  RightLeftAuto;
+    font-size: 4em;
+    line-height: 2em;
+    font-weight: bold;
+    color: $ProdItemColor;
+    background-color: $ProdItemBkg;
+    ///////M E D I A queries
+    @media (min-width:480px) and (max-width:1024px){
+        font-size: 3em;
+        line-height: 1.5em;
+    }
+    
+    @media (max-width:479px){
+        font-size: 2.0em;
+        line-height: 0.8em;
+    }
+    
+}
+
+h2.General{
+    @extend %AsBlock_;
+    @extend %TextCenter_;
+    font-size: 2.5em;
+    @extend %LineHeightStd_;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+     @include  RightLeftAuto;
+    
+    @media (min-width:768px) and (max-width:1024px){
+        font-size: 2.2em;
+         
+    }
+    
+    ///////M E D I A queries
+    @media (min-width:480px) and (max-width:768px){
+        font-size: 1.8em;
+         
+    }
+    
+    @media (max-width:479px){
+        font-size: 1.3em;
+        
+    }
+    
+}
+
+
+///////H3 general
+h3.General{
+    @extend %AsBlock_;
+    @extend %TextCenter_;
+    font-size: 2em;
+    @extend %LineHeightStd_;
+    font-weight: bold;
+     @include  RightLeftAuto;
+     @media (min-width:768px) and (max-width:1024px){
+        font-size: 1.7em;
+         
+    }
+    
+     @media (min-width:480px) and (max-width:768px){
+        font-size: 1.4em;
+    }
+    
+    
+    
+    @media (max-width:479px){
+        font-size: 1.1em;
+        
+    }
+    
+}
+
+h4.General{
+     @extend %AsBlock_;
+    @extend %TextCenter_;
+    font-size: 1.6em;
+    @extend %LineHeightStd_;
+    font-weight: bold;
+    @include  RightLeftAuto;
+      @media (min-width:768px) and (max-width:1024px){
+        font-size: 1.4em;  
+    }
+    
+     @media (min-width:480px) and (max-width:768px){
+        font-size: 1.2em;
+    }
+   
+    @media (max-width:479px){
+        font-size: 1.0em;
+        
+    }
+  
+}
+///////////general B U T T O N use as link
+.GeneralButtonLnk{
+    @extend %TextNoDecor_;
+    @extend %AsInline_;
+    padding: 1em 1em;
+    @extend %TextCenter_;
+    border: 2px solid $GenerealButtonBorderColor;
+    color: $GeneralButtonColor;
+    background-color: $GeneralButtonBackground;
+    transition: color 0.5s, background 0.5s;
+    &:hover{
+        color: $GeneralButtonHoverColor;
+        background-color: $GeneralButtonHoverBackground;
+    }
+    
+   
+}
+///////////general ---- I M A G E --- ////////
+img.General{
+        @extend %FullMaxWidth_;
+        @extend %HeightAuto_;
+        @extend %AsInline_;
+      //  @extend %FullWidth_;
+    }
+
+.img-full-width-{
+     @extend %FullWidth_;
+}
+
+
+.img-picture-trim-{
+    width:15vw;
+    @media (max-width:480px){
+        width: 25vw;
+    }
+}
+////// VERTICAL ALIGNMENT  ////
+
+.VerticalAlignmentWrap{
+    height: 100%;
+    @extend %AsFlex_;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+
+.general-bottom-margin-{
+    margin-bottom: 1em;
+}
+
+.general-top-margin-{
+    margin-bottom: 1em;
+}
+/////google - I C O N /////
+ .material-icons.md-18{ 
+    font-size: 32px;
+    color: $NavMobileIconColor;
+     &:hover{
+         color: #f22;
+     }
+    }
