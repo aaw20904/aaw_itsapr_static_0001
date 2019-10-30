@@ -11,17 +11,13 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
 </head>
-    
-  
-	<body>
-        
-   
+	<body >
         <section class="NavWrap">
        <nav class="MnuContainer nav-colors-"  >
            
                   <!----please C H A N G E  PATH to "/img/Logo60.png"-->
             <div class="HeaderColor1- HeaderBkg1-"  >
-                    <img class="logo" src="img/Logo280.png" alt="image not found"
+               <a href="#start">    <img class="logo" src="img/Logo280.png" alt="image not found"
                     srcset=" 
                             img/Logo160.png 160w,
                             img/Logo180.png 180w,
@@ -32,24 +28,24 @@
                                 (max-width: 768px) 150px,
                                 (max-width: 978px) 170px,
                                 250px"
-                         >
-            </div>
+                                         > </a>
+                      </div>
               <!--******************* the Mobile nav menu ------------->
             <div class="HeaderColor1- HeaderBkg1-">
                 
-                <article class="material-icons md-18 MobNav"  >
+                <article  onclick="myFunctionPopup()" class="material-icons md-18 MobNav"  >
                     dehaze
-                    <!--*******dropdown item****-->
+                   
                     <div>
-                      
-                        <ul class="Dropdown" id="MobDropNav">
-                         <li><a href="#" class="mobile-nav-font nav-colors-">НОВИНИ</a></li>
-                         <li> <a href="#" class="mobile-nav-font nav-colors-">РIШЕННЯ</a></li>
-                         <li> <a href="#" class="mobile-nav-font nav-colors-">ПОСЛУГИ</a></li>
-                          <li><a href="#" class="mobile-nav-font nav-colors-">КОНТАКТИ</a></li>
-                        </ul>   
                     </div>
                 </article>
+                 <!--*******dropdown item****-->
+                 <ul class="Dropdown " id="MobDropNav">
+                         <li><a href="https://www.facebook.com/ITSAPR/" target="_blank" class="mobile-nav-font nav-colors- anchor">НОВИНИ</a></li>
+                         <li> <a href="#solutions" class="mobile-nav-font nav-colors- anchor">РIШЕННЯ</a></li>
+                         <li> <a href="#services" class="mobile-nav-font nav-colors- anchor">ПОСЛУГИ</a></li>
+                          <li><a href="#contacts" class="mobile-nav-font nav-colors- anchor">КОНТАКТИ</a></li>
+                        </ul>   
                
             </div>
             <div class="HeaderColor1- HeaderBkg1-"> 
@@ -58,7 +54,7 @@
             <!--********************** the PC nav menu *************-->
             <ul class="FlexNavPC nav-colors-">
                 <li>
-                    <a href="https://www.facebook.com/ITSAPR/" class="nav-colors- bold-font- main-font-family- menu-font-" >НОВИНИ</a>
+                    <a href="https://www.facebook.com/ITSAPR/"  target="_blank" class="nav-colors- bold-font- main-font-family- menu-font-" >НОВИНИ</a>
                 </li>
                 <li>
                     <a href="#" class="nav-colors- bold-font- main-font-family- menu-font-" >|</a>
@@ -70,13 +66,13 @@
                     <a href="#" class="nav-colors- bold-font- main-font-family- menu-font-" >|</a>
                 </li>
                 <li>
-                    <a href="#"  class=" bold-font- nav-colors- main-font-family- menu-font-" >ПОСЛУГИ</a>
+                    <a href="#services"  class=" bold-font- nav-colors- main-font-family- menu-font-" >ПОСЛУГИ</a>
                 </li>
                 <li>
                     <a href="#" class="nav-colors- bold-font- main-font-family- menu-font-" >|</a>
                 </li>
                  <li>
-                    <a href="#"  class=" bold-font- nav-colors- main-font-family- menu-font-" >КОНТАКТИ</a>
+                    <a href="#contacts"  class=" bold-font- nav-colors- main-font-family- menu-font-" >КОНТАКТИ</a>
                 </li>
             </ul>  
             </section>    
@@ -85,12 +81,12 @@
         </section>
       
         <!-- he H E R O section----->
-        <section class="GeneralWrapper hero-fnt-color-schema-" style="width: 100%;">
+    <!--    <section class="GeneralWrapper hero-fnt-color-schema-" style="width: 100%;">
             <div class="hero-fnt-color-schema-">
-                <div class="hero-fnt-color-schema-">
+                <div class="hero-fnt-color-schema-">-->
                     <article class="hero main-font-family- hero-fnt-color-schema-">
                         
-                         <div>
+                         <div id="start">
                          <img   alt="a airplane on an airport"
                     srcset=" img/320hero.jpg 160w,
                             img/620hero.jpg 180w"
@@ -99,32 +95,34 @@
                     src="img/620hero.jpg" > 
                         </div>
                         
-                        <span class="capital">К</span>омпанія <span>"Інформаційні технології САПР"</span> –постачальник та інтегратор інженерного програмного забезпечення в сфері автоматизації проектної та виробничої діяльності.
-У портфелі компанії – десятки рішень від світових лідерів, на базі яких реалізуються комплексні проекти у машинобудуванні, приладобудуванні, атомній, нафтогазовій і хімічній промисловості, металургії, промислово-цивільному будівництві та інших галузях. Провідні фахівці компанії працюють на IT-ринку з 1994 року,а офіси,
+                        <div>
+                        Компанія "Інформаційні технології САПР" – постачальник та інтегратор інженерного програмного забезпечення в сфері автоматизації проектної та виробничої діяльності.
+У портфелі компанії – десятки рішень від світових лідерів, на базі яких реалізуються комплексні проекти у машинобудуванні, приладобудуванні, атомній, нафтогазовій і хімічній промисловості, металургії, промислово-цивільному будівництві та інших галузях. Провідні фахівці компанії працюють на IT-ринку з 1994&nbsp;року, а офіси, 
 відкриті у найбільш великих промислових регіонах країни, дозволяють 
 нам завжди бути поруч із нашими замовниками, яких в Україні вже налічується 
-понад 650 підприємств.
+понад 650&nbsp;підприємств.
+                        </div>
                         
                         
                        
 </article>
-                </div>
+         <!--       </div>
             </div>
-        </section>
+        </section>  -->
         
 
    <!---PROGRAM PRODUCTS------------->
-       <section class="GeneralWrapper" id="solutions">
-            <div>
+       <section class="GeneralWrapper"  id="solutions" >
+            <div >
                   <div>
-                  <h2 class="General main-font-family">
+                  <h2 class="General main-font-family- header-firm-color" >
                     РІШЕННЯ
                   </h2>
-                  <h3 class="General main-font-family general-bottom-margin-" >
+                  <h3 class="General main-font-family- general-bottom-margin- header-firm-color" >
                    для промисловості
                   </h3>
                       
-                    <section class="GeneralFlex">
+                    <section class="GeneralFlex flex-items-start">
                          <!--  flex item-->
                         <div class="nine-items">
                             <article class="ProdItem">
@@ -139,8 +137,8 @@
                     src="img/engine768.jpg"   alt=" a lifecycle management"> 
                                 </div>
                                  <div class="wrp">
-                                     <a href="#" class="btn-prod-font- main-font-family">
-                                     Детальнійше
+                                     <a href="/Solutions/Web/PLM.pdf" target="_blank"  class="btn-prod-font- main-font-family-">
+                                     Детальніше
                                      </a>
                                 </div>
                                  
@@ -159,8 +157,8 @@
                                 768px"> 
                                 </div>
                                  <div class="wrp">
-                                     <a href="#" class="btn-prod-font- main-font-family">
-                                     Детальнійше
+                                     <a href="/Solutions/Web/CT3D.pdf"  target="_blank" class="btn-prod-font- main-font-family-">
+                                      Детальніше
                                      </a>
                                 </div>
                             </article>
@@ -178,8 +176,8 @@
                                 768px"> 
                                 </div>
                                  <div class="wrp">
-                                     <a href="#" class="btn-prod-font- main-font-family">
-                                     Детальнійше
+                                     <a href="/Solutions/Web/GULFSTREAM.pdf"  target="_blank" class="btn-prod-font- main-font-family-">
+                                      Детальніше
                                      </a>
                                 </div>
                             </article>
@@ -197,8 +195,8 @@
                                 768px"> 
                                 </div>
                                  <div class="wrp">
-                                     <a href="#" class="btn-prod-font- main-font-family">
-                                     Детальнійше
+                                     <a href="/Solutions/Web/KOMPAS-Mechanical.pdf"  target="_blank" class="btn-prod-font- main-font-family-">
+                                      Детальніше
                                      </a>
                                 </div>
                             </article>
@@ -216,8 +214,8 @@
                                 768px"> 
                                 </div>
                                  <div class="wrp">
-                                     <a href="#" class="btn-prod-font- main-font-family">
-                                     Детальнійше
+                                     <a href="/Solutions/Web/KOMPAS-Equipment.pdf"  target="_blank" class="btn-prod-font- main-font-family-">
+                                      Детальніше
                                      </a>
                                 </div>
                             </article>
@@ -235,8 +233,8 @@
                                 768px"> 
                                 </div>
                                  <div class="wrp">
-                                    <a href="#" class="btn-prod-font- main-font-family">
-                                     Детальнійше
+                                    <a href="/Solutions/Web/KOMPAS-Electrical.pdf"  target="_blank"  class="btn-prod-font- main-font-family-">
+                                      Детальніше
                                     </a>
                                 </div>
                             </article>
@@ -254,8 +252,8 @@
                                 768px"> 
                                 </div>
                                  <div class="wrp">
-                                    <a href="#" class="btn-prod-font- main-font-family">
-                                     Детальнійше
+                                    <a href="/Solutions/Web/SOLIDWORKS.pdf"  target="_blank"  class="btn-prod-font- main-font-family-">
+                                      Детальніше
                                     </a>
                                 </div>
                             </article>
@@ -273,8 +271,8 @@
                                 768px"> 
                                 </div>
                                  <div class="wrp">
-                                    <a href="#" class="btn-prod-font- main-font-family">
-                                     Детальнійше
+                                    <a href="/Solutions/Web/RasterArts.pdf"  target="_blank" class="btn-prod-font- main-font-family-">
+                                      Детальніше
                                     </a>
                                 </div>
                             </article>
@@ -292,12 +290,32 @@
                                 768px"> 
                                 </div>
                                  <div class="wrp">
-                                    <a href="#" class="btn-prod-font- main-font-family">
-                                     Детальнійше
+                                    <a href="/Solutions/Web/Intech.pdf"  target="_blank"  class="btn-prod-font- main-font-family-">
+                                      Детальніше
                                     </a>
                                 </div>
                             </article>
                         </div>
+                              <!--  flex item-->
+                         <div class="nine-items">
+                            <article class="ProdItem">
+                                <div class="wrp">
+                                    <img   alt="raskroj" src="img/qform768.jpg"
+                    srcset=" img/qform320.jpg 320w,
+                            img/qform640.jpg 640w,
+                            img/qform768.jpg 768w"
+                     sizes="    (max-width: 480px) 160px,
+                                (max-width: 640px) 480px,
+                                768px"> 
+                                </div>
+                                 <div class="wrp">
+                                    <a href="/Solutions/Web/QForm.pdf"  target="_blank"  class="btn-prod-font- main-font-family-">
+                                      Детальніше
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                             
                     </section>
                       
                 
@@ -308,14 +326,14 @@
        <section class="GeneralWrapper">
             <div >
                   <div>
-                  <h2 class="General main-font-family">
+                  <h2 class="General main-font-family- header-firm-color">
                     РІШЕННЯ
                   </h2>
-                  <h3 class="General main-font-family general-bottom-margin-">
+                  <h3 class="General main-font-family- general-bottom-margin- header-firm-color">
                     для цивільного і промислового будівництва
                   </h3>
                       
-                    <section class="GeneralFlex">
+                    <section class="GeneralFlex flex-items-start">
                         <div class="two-items">
                             <article class="ProdItem">
                             <div class="wrp">
@@ -329,8 +347,8 @@
                     src="img/renga768.jpg"   alt="a airplane on an airport"> 
                                 </div>
                                  <div class="wrp">
-                                     <a href="#" class="btn-prod-font- main-font-family">
-                                     Детальнійше
+                                     <a href="/Solutions/Web/Renga.pdf"  target="_blank"  class="btn-prod-font- main-font-family-">
+                                     Детальніше
                                      </a>
                                 </div>
                                  
@@ -348,34 +366,26 @@
                                 768px"> 
                                 </div>
                                  <div class="wrp">
-                                     <a href="#" class="btn-prod-font- ">
-                                     Детальнійше
+                                     <a href="/Solutions/Web/Pilot-ICE.pdf"  target="_blank"  class="btn-prod-font- main-font-family-">
+                                     Детальніше
                                      </a>
                                 </div>
                             </article>
                         </div>
                     </section>
                       
-                
+                <a href="#contacts" class="GeneralButtonLnk btn-prod-font- main-font-family-">
+                        Задати питання
+                     </a>
                 </div> 
             </div>
         </section>    
-        
-        <!------QUESTION button---->
-         <section class="GeneralWrapper">
-            <div>
-                 <div>
-                     <a href="#" class="GeneralButtonLnk btn-prod-font-">
-                        Задати питання
-                     </a>
-                </div>
-            </div>
-        </section>
+
     <!------software designers---------->
         <section class="GeneralWrapper">
             <div>
                 <div>
-                    <h4 class="General btn-prod-font- general-bottom-margin-">РОЗРОБНИКИ ПРОГРАМНОГО ЗАБЕЗПЕЧЕННЯ</h4>
+                    <h3 class="General btn-prod-font- general-top-margin- main-font-family- header-firm-color">РОЗРОБНИКИ ПРОГРАМНОГО ЗАБЕЗПЕЧЕННЯ</h3>
                 </div>
             </div>
         </section>
@@ -406,24 +416,25 @@
                                 (max-width: 640px) 480px,
                                 (max-width: 768px) 640px,
                                 986px"> 
+                    <a href="#contacts" class="GeneralButtonLnk btn-prod-font- main-font-family-">Задати питання</a>
                 </div>
             </div>
         </section>
         <!--**** S E R V I C E S ----------->
-         <section class="GeneralWrapper">
+         <section class="GeneralWrapper"   id="services">
             <div>
                 <div>
-                    <h2 class="General btn-prod-font- general-bottom-margin-">
+                    <h2 class="General btn-prod-font- main-font-family- general-bottom-margin- header-firm-color">
                     ПОСЛУГИ
                     </h2>
-                    <article class="GeneralFlex">
+                    <article class="GeneralFlex flex-items-start">
                         <div class="two-items">
                             <img class="General img-picture-trim-" src="img/Big_Boss.png" alt="boss">
-                             <h3 class="General  main-font-family">Для керівників</h3>
-                            <p class="simple simple-par-font- main-font-family ">
+                             <h3 class="General  main-font-family-">Для керівників</h3>
+                            <p class="simple simple-par-font- main-font-family- ">
                             На шляху впровадження комплексного CAD/CAE/CAM/PLM-проекту по автоматизації підприємства або організації, компанія "Інформаційні технології САПР" готова пройти разом з вами весь шлях від підбору програмного і апаратного забезпечення, до впровадження рішення в промислову експлуатацію і готова провести:
                             </p>
-                            <ul class="simple  simple-par-font-  main-font-family">
+                            <ul class="simple  simple-par-font-  main-font-family-">
                                 <li>Загальне консультування з питань автоматизації і управління конструкторсько-технологічною підготовкою виробництва промислового підприємства або проектно-конструкторських робіт організації;</li>
                                 <li>Аудит наявного програмного і апаратного забезпечення з метою з'ясування їх відповідності вимогам, що пред'являє комплекс автоматизованих систем;</li>
                                 <li>Розробка рекомендацій з модернізації технічного парку та мережевої інфраструктури;</li>
@@ -435,11 +446,11 @@
                         </div>
                         <div class="two-items">
                              <img class="General img-picture-trim-" src="img/Engineer.png" alt="engineer">
-                            <h3 class="General  main-font-family">Для інженерів</h3>
-                             <p class="simple simple-par-font- main-font-family">
+                            <h3 class="General  main-font-family-">Для інженерів</h3>
+                             <p class="simple simple-par-font- main-font-family-">
                             У сучасному мінливому світі буває важко завжди бути в курсі останніх тенденцій комп'ютерного моделювання, інженерних розрахунків, управління інженерними даними, і ще важче – опанувати відповідні інструментами на високопрофесійному рівні. Розуміючи це, компанія "Інформаційні технології САПР" завжди готова запропонувати вам:
                             </p>
-                            <ul class="simple   simple-par-font- main-font-family">
+                            <ul class="simple   simple-par-font- main-font-family-">
                                 <li>Курси навчань з програмного забезпечення, завдяки яким фахівці швидко освоюють нові можливості програм для 3D-моделювання, CAE-розрахунків, автоматизації технологічної підготовки виробництва, управління інженерними даними та інші;</li>
                                 <li>Тестування знань з видачою сертифікату встановленого зразку рівня "Спеціаліст" або "Викладач" у разі успішної здачі іспиту по 3D-моделюванню;</li>
                                 <li>Безкоштовні навчальні посібники для самоосвіти;</li>
@@ -451,5 +462,170 @@
                 </div>
              </div>
         </section>
+        <!--A technical support article--->
+         <section class="GeneralWrapper">
+            <div>
+                <div>
+                     <img class="General img-picture-trim-" src="img/support.png" alt="support_service" >
+                    <h3 class="General  main-font-family-">Технічна підтримка</h3>
+                    <p class="simple simple-par-font- main-font-family-">
+                    В компанії діє багаторівнева система технічної підтримки користувачів. На першому рівні знаходяться співробітники офісу, розташованого в безпосередній близькості від замовника – саме вони вирішують основну масу виникаючих питань, а в центральний офіс передаються лише випадки, що вимагають особливої уваги. При цьому на будь-якому з етапів до вирішення проблеми можуть підключатися експерти найвищого рівня – фахівці від команди розробників, які завжди готові допомогти користувачам розібратися в проблемі і подолати всі труднощі. 
+                    </p>
+                    <p class="simple simple-par-font- main-font-family-">
+                    За видами, технічна підтримка більшості продуктів поділяється на початкову, базову, гарантійну та індивідуальну:
+                    </p>
+                    <article class="GeneralFlex flex-items-stretch">
+                        <div class="any-items">
+                            <div class="GaranteeWrapper">
+                                <section class="VerticalFlex">
+                                <!--1 item-->  <div class="ItemLowLast">
+                            <img class="General img-support-trim-" src="img/N.png" alt="N">
+                             <h4 class="General  main-font-family-">Початкова</h4>
+                                        </div>
+                            <!--2 item-->  <div class="ItemLowLast">
+                            <p class="simple   main-font-family- garantee-font-"> Для користувачів ознайомлювальних версій та ПЗ, що розповсюджується вільно</p>
+                                        </div>
+                            <!--3 item--><div class="ItemLowLast">
+                            <h5 class="General main-font-family-">Безкоштовно</h5>
+                            <h5 class="General main-font-family-  general-bottom-margin-">Безстроково</h5>
+                            </div>
+                                </section>
+                        </div>
+                        </div>
+                        <div class="any-items">
+                            <div class="GaranteeWrapper">
+                                <section class="VerticalFlex">
+                             <!--1 item-->  <div class="ItemLowLast">
+                            <img class="General img-support-trim-" src="img/B.png" alt="B">
+                             <h4 class="General  main-font-family-">Базова</h4>
+                                             </div>
+                             <!--2 item-->  <div class="ItemLowLast">
+                                    <!----! ! !  I N L I N E  style for text center---> 
+                            <p class="simple  main-font-family- garantee-font-" style="text-align: center; margin-left:0;">
+                            Ліцензійним користувачам
+                            </p>
+                                            </div>
+                             <!--3 item--> <div class="ItemLowLast">
+                            <h5 class="General main-font-family-">Без додаткової оплати</h5>
+                            <h5 class="General main-font-family-  general-bottom-margin-">Безстроково</h5>
+                                            </div>
+                                </section>
+                        </div>
+                            </div>
+                        <div class="any-items">
+                            <div class="GaranteeWrapper">
+                                <section class="VerticalFlex">
+                            <!--1 item-->  <div class="ItemLowLast">
+                            <img class="General img-support-trim-" src="img/G.png" alt="G">
+                             <h4 class="General  main-font-family-">Гарантійна</h4>
+                                        </div>
+                            <!--2 item-->  <div class="ItemLowLast">
+                            <p class="simple main-font-family- garantee-font-">
+Після придбання програмного продукту або сплати пакета оновлень (ліцензійного платежу)
+                            </p>
+                                       </div>
+                            <!--3 item--> <div class="ItemLowLast">
+                                <h5 class="General main-font-family-">Без додаткової оплати</h5>
+                            <h5 class="General main-font-family- general-bottom-margin-">Протягом одного року</h5>
+                                         </div>
+                                </section>
+                        </div>
+                            </div>
+                        <div class="any-items">
+                            <div class="GaranteeWrapper">
+                                 <section class="VerticalFlex">
+                               <!--1 item-->  <div class="ItemLowLast">        
+                            <img class="General img-support-trim-" src="img/I.png" alt="I">
+                             <h4 class="General  main-font-family-">Індивідуальна</h4>
+                                     </div>
+                              <!--1 item-->  <div class="ItemLowLast">
+                            <p class="simple   main-font-family- garantee-font-">
+                            За окремо укладеним договором
+                            </p>
+                                     </div>
+                                  <!--1 item-->  <div class="ItemLowLast">     
+                            <h5 class="General main-font-family-">За додаткову плату</h5>
+                            <h5 class="General main-font-family- general-bottom-margin-">Протягом зафіксованого у договорі терміну</h5>
+                            </div>
+                                </section>
+                                </div>
+                            </div>
+                    </article>
+                    <!--last string-->
+                    <p class="simple main-font-family- simple-par-font-">
+                    Детальний перелік послуг та умов їх надання, зафіксовані в угоді про рівень сервісу (ServiceLicenseAgreement – SLA) по кожному з програмних продуктів окремо.
+                    </p>
+                    <a href="#contacts" class="GeneralButtonLnk btn-prod-font- main-font-family-">
+                        Задати питання
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!--footer--------------->
+         <section class="GeneralWrapper footer-colors-">
+            <div class="footer-colors-">
+                <footer class="footer-colors-">
+                    <article class="GeneralFlex flex-items-stretch footer-colors-">
+                        <div class="footer-items footer-colors-">
+                            <article class="FooterItemWrapper footer-colors-">
+                             <h4 class="General  main-font-family- " id="contacts">КИЇВ</h4>
+                                 <p class="main-font-family- garantee-font- telephone ">
+                                     +38&nbsp;044&nbsp;503-95-34</p>
+                                <p class="  main-font-family- garantee-font- mailto">info@itsapr.com </p>
+                                 <p class="  main-font-family- garantee-font- adress general-bottom-margin-">просп. Перемоги, 123, офіс&nbsp;309 </p>
+                                <!---google cards-->
+                                <iframe width="320" height="320"   id="gmap_canvas" src="https://maps.google.com/maps?q=%D0%BF%D1%80%D0%BE%D1%81%D0%BF.%20%D0%9F%D0%B5%D1%80%D0%B5%D0%BC%D0%BE%D0%B3%D0%B8%2C%20123&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            </article>
+                        </div>
+                        <div class="footer-items">
+                             <article class="FooterItemWrapper">
+                             <h4 class="General  main-font-family- ">ДНІПРО</h4>
+                            <p class=" main-font-family- garantee-font- telephone " >
+                                +38&nbsp;056&nbsp;790-07-40 </p>
+                                 <p class="main-font-family- garantee-font- mailto">dp@itsapr.com</p>
+                                  <p class="  main-font-family- garantee-font- adress general-bottom-margin-">просп. Слобожанський, 35, офіс&nbsp;700</p>
+                                 <!--google cards-->
+                                 <iframe  width="320" height="320"  id="gmap_canvas" src="https://maps.google.com/maps?q=%D0%BF%D1%80%D0%BE%D1%81%D0%BF.%20%D0%A1%D0%BB%D0%BE%D0%B1%D0%BE%D0%B6%D0%B0%D0%BD%D1%81%D1%8C%D0%BA%D0%B8%D0%B9%2C%2035&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            </article>
+                        </div>
+                        <div class="footer-items">
+                             <article class="FooterItemWrapper">
+                             <h4 class="General  main-font-family-">ХАРКІВ</h4>
+                                    <p class="main-font-family- garantee-font- telephone" >
+                                        +38&nbsp;057&nbsp;717-96-65</p>
+                                 <p class="main-font-family- garantee-font- mailto">kharkiv@itsapr.com</p>
+                                  <p class="  main-font-family- garantee-font- adress general-bottom-margin-">просп. Гагаріна, 4, офіс&nbsp;86-А</p>
+                                 <!-----------google cards---------->
+                                 <iframe width="320" height="320" id="gmap_canvas" src="https://maps.google.com/maps?q=%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2%20%D0%9F%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%20%D0%93%D0%B0%D0%B3%D0%B0%D1%80%D1%96%D0%BD%D0%B0%204&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                            </article>
+                        </div>
+                    </article>
+                </footer>
+             </div>
+        </section>
+        <!--s c r i p t s for mobile menu mechanism- click on the right 'hamburger' button on the top left------->
+
+        <script>
+function myFunctionPopup() {
+ /* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+     document.getElementById("MobDropNav").classList.toggle("show");
+}
+    // Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.MobNav')) {
+    var dropdowns = document.getElementsByClassName("Dropdown");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+ 
+
+            </script>
     </body>
 </html>
