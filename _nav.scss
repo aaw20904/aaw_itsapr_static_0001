@@ -4,7 +4,8 @@
   @extend %FullMaxWidth_;
   z-index: 2;
   @extend %PosFixed_;
-  max-width: 99%;
+    top:0;
+    left: 0;
     @extend %FullWidth_;
     margin:0 auto;
 &>nav.MnuContainer{
@@ -15,7 +16,7 @@
     @extend %NoVertMargins_;
     @extend %NoHorizMargins_;
 ///PADINGS
-    padding: 1em 2em 1em 2em;
+    padding: 0.3em;
     @extend %RowNowrap_;  /*flex-flow property*/
     z-index: 2;
     justify-content: space-between;
@@ -52,7 +53,7 @@
 
 /************
 THE LOGOTYPE*/
-img.logo{
+*.logo{
     display: inline-block;
    width: 100%;
     height: auto;
@@ -88,6 +89,12 @@ ul.FlexNavPC{
   
                 }
          }
+    //delete margins in separators '|'
+    &>li:nth-child(even)>a{
+          
+            @extend %NoHorizMargins_;
+            @extend %NoHorizPaddings_;
+    }
     /*****
     PRI NAVEDENII MYSHY NA NECHETNYE ELEMENTY*/
     &> li:nth-child(odd)>a:hover{
@@ -116,23 +123,27 @@ ul.FlexNavPC{
         z-index: 10;
             
         }
-    
- &:hover>*{  
+    //show a child element on hover 
+/*   &:hover>*{  
   @extend %AsInline_;
    
  
-           }
+           }*/
 }
 
 /*   M O B I L E   M E N U - CORE (the dropdown part)********/
 
 .Dropdown{
-    @extend %AsFlex_;
+    display: none; //must be flex
    @extend %ColNowrap_;
-     
+    @extend %PosFixed_;
+    left: 0;
+    
     justify-content: stretch;
     align-items: stretch;
-   z-index: 100;
+    z-index: 100;
+    @extend %FullWidth_;
+    @extend %FullMaxWidth_;
     
     &>li{
     @extend %AsBlock_;
@@ -150,16 +161,17 @@ ul.FlexNavPC{
         @extend %FullWidth_;
         flex: 1;
         padding: 0.7em;
-        border-bottom: 2px solid white; 
+       // border-bottom: 2px solid white; 
         transition: color 0.5s, background-color 0.5s;
     }
     
-    &>li *:first-child{
-        border-top: 2px solid white; 
-    }
+    
     
     &>li *:hover{
         color: $DropdovnHoverColor;
         background-color: $DropdownHoverBkg;
     }
 }
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:flex;}
