@@ -2,62 +2,63 @@
 //////////////H E R O - the first article 
 // use together with .hero-fnt-color-schema  
 .hero{
-     @extend %AsInline_;
-    @extend %TextJustify_;
-    
-    span{
-        font-style: italic;
-        letter-spacing: 0.2em;
-        }
-        
-    span.capital{
-        font-size: $HeroCapitalLetter;
-        margin: 0 0 0 2em;
-        letter-spacing: 0;
-        font-style: normal;
-        
-        @media (max-width: 480px){
-            margin-left: 0;
-        }
-        
-        }
-     margin-top: 4.6rem;////default top margin
+     @extend %AsFlex_;
+    @extend %RowNowrap_;
+    justify-content: center;
+    align-items: stretch;
+     @extend %TextJustify_;
+     @extend %NoVertMargins_;
+     @extend %NoHorizMargins_;
+     padding: 4.1rem 0 0 0;////default top padding
+     
     /*************
     media queries for the top margin*/
-    @media (max-width: 978px)  {
-         margin-top: 3.5rem;
+    @media (max-width: 986px){
+        padding-top: 3.0rem;
+    }
+    
+    
+    
+    
+    @media (max-width: 480px)  {
+        flex-flow: column nowrap;
+       
     }  
 
         &>div{
-            max-width: 50%;
-         //   max-height: 100%;
-            float: right;
-            @extend %AsInline_;
-            padding: $HeroPadding; ///_variables.scss  
-            margin: $HeroImgMargins; ///_variables.scss
+            @extend %NoVertMargins_;
+            @extend %NoHorizMargins_;
+            @extend %NoHorizPaddings_;
+            @extend %NoVertPaddings_;
+            flex: 1;
              //L O G O
             img{
                 @extend %FullMaxWidth_;
                 @extend %HeightAuto_;
                 width: 100%;
                 @extend %AsInline_;
+                @extend %NoVertMargins_;
+                @extend %NoHorizMargins_;
+                @extend %NoHorizPaddings_;
+                @extend %NoVertPaddings_;
              }
-            &::after{
-                content: "."; 
-                display: block; 
-                height: 0; 
-                clear: both; 
-                visibility: hidden;
-            }
+            
+                order: 2;
          ///if there are a mobile device
                 @media (max-width: 480px){
-                float: none;
-                display: block;
-                max-width: 100%;
-                    width: 100%;
+                order: 1;
                 }
  
             }
+    //t e x t 
+    &>div:last-child{
+       padding:  1em;
+        flex: 1;
+        order: 1;
+        @media (max-width: 480px){
+                order: 2;
+                }
+    }
     
    
 
@@ -67,14 +68,13 @@
 
 A flex-container for products*/
 .GeneralFlex{
-     @extend %AsFlex_;
-     @extend %NoHorizMargins_;
-     @extend %NoVertMargins_;
+    @extend %AsFlex_;
+    @extend %NoHorizMargins_;
+    @extend %NoVertMargins_;
     @extend %RowWrap_;
     @extend %FullWidth_;//because FLEX isn`t a block element
     justify-content: space-between;
-    align-items: flex-start;
-    
+ 
     &>*{
        ///base item properties
         display: block;
@@ -87,9 +87,8 @@ A flex-container for products*/
         /*****for a Desktop , 2 items next to other*/
         flex:  1 0.8 33.3%;
         //////if there is a mobile device - next under other
-        @media (max-width: 480px){
-                flex-basis: 90%;
-                }
+     @media (max-width: 480px){
+         flex-basis: 100%;}
     }
     
     /********
@@ -99,12 +98,42 @@ A flex-container for products*/
   /*     @media (min-width: 480px ) and (max-width:768px){
            flex-basis: 40%;
        }*/
-      @media (max-width: 480px){
-                flex-basis: 100%;
-       }
+    @media (max-width: 480px){
+        flex-basis: 100%;}
        
     }
+    
+    &>.any-items{
+           padding: 1vw;
+        flex: 1 0.8 25%;
+    /*    @media(min-width: 481px) and (max-width: 986px){
+            flex-basis: 25%;
+        }*/
+        
+        @media (max-width: 480px){
+                flex-basis: 100%;
+        }
+    }
+    
+    &>.footer-items{
+         padding: 1vw;
+        flex: 1 0.8 25%;
+        
+         @media (max-width: 768px){
+                flex-basis: 100%;
+        }
+        
+    }
+    
+     
+}
 
+/******A L I G N ***I T E M S*/
+.flex-items-start{
+     align-items: flex-start;
+}
+.flex-items-stretch{
+     align-items: stretch;
 }
 
 /**************************
@@ -115,24 +144,25 @@ P R O D U C t - item**/
    @extend %FullMaxWidth_;
     height: auto;
     @extend %AsInline_;///////
-    border: 2px solid 	#ccc;
+
     background-color: $ProdItemBkg;
     @extend %NoHorizPaddings_;
     @extend %NoVertPaddings_;
-     margin: 1.5em auto;
+     margin: 1em auto;
    //  box-shadow: 8px 7px 11px -1px rgba(0,0,0,0.75);
     &>.wrp{
         @extend %AsInline_;
-        /////////////////////////////
         @extend %FullMaxWidth_;
         @extend %FullWidth_;
-        ///////////
         @extend %TextCenter_;
         @extend %NoHorizPaddings_;
         @extend %NoVertPaddings_;
+        @extend %NoHorizMargins_;
+        @extend %NoVertMargins_;
          object-fit: cover;
         ///I M A G E styling
          img{
+           border: 1px solid 	#333;
            @extend %AsBlock_;
            @extend %FullMaxWidth_;
            @extend %FullWidth_;
@@ -150,7 +180,7 @@ P R O D U C t - item**/
             @extend %TextCenter_;
             @extend %CursorPointer_;
             @extend %TextNoDecor_;
-            margin: 1em 0 1em 0;
+            margin: 0 auto;
             border-radius: 5px;
             border: 2px solid $BtnProdBorder;
             padding: 0.5em 1em;
@@ -165,7 +195,11 @@ P R O D U C t - item**/
               }
        }
     
+    
+ 
+
     /********MEDIA Q U E R I E S for ProdItem*/
+    
      width: 26vw;//width over 768
      @media (min-width: 480px ) and (max-width:1024px){
     width: 35vw;
@@ -175,27 +209,59 @@ P R O D U C t - item**/
        }
 }
 
+/////////garantee wrapper///
 
-/////simple paragraph/////
-
-p.simple{
-    @extend %TextJustify_;
+.GaranteeWrapper{
     @extend %AsInline_;
-    @extend %FullMaxWidth_;
-    @extend %FullWidth_;
-    @extend %NoHorizMargins_;
-    @extend %NoVertMargins_;
-    @extend %NoHorizPaddings_;
-    @extend %NoVertPaddings_;
-    &::first-letter{
-        margin-left:2em;
+   // border: 2px solid #cfc;
+    width: 20vw;
+    height: 100%;
+    @media (max-width: 986px) and (min-width: 481px){
+        width:40vw;
     }
-    padding: 1em;
+    @media (max-width: 480px){
+        width: 100%;
+    }
 }
+/********** F O O T E R - wrapper inside flex-item */
+
+.FooterItemWrapper{
+     @extend %AsFlex_;
+    @extend %ColNowrap_;
+    justify-content: space-between;
+    align-items: stretch;
+   // border: 2px solid #cfc;
+    width: 28vw;
+    height: 100%;
+    @media (max-width: 986px) {
+        width: 100%;
+    }
+    
+}
+
+/********V E R T I C A L -- F L E X----*/
+
+.VerticalFlex{
+    @extend %AsFlex_;
+    @extend %FullWidth_;
+    @extend %FullMaxWidth_;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100%;
+    &>.ItemLowLast{
+        flex: 2;
+    }
+    &>.ItemLowLast:last-child{
+        flex: 1;
+    }
+}
+
+
 ///simple L I S T ---////
 ul.simple{
-   border: 1px dashed rgba(255,0,0,0.2);
-    padding: 0 1em;
+//   border: 1px dashed rgba(255,0,0,0.2);
+    padding: 0 0.5em 0 1.9em;
     @extend %AsInline_;
     @extend %FullMaxWidth_;
     @extend %FullWidth_;
@@ -205,11 +271,66 @@ ul.simple{
     @extend %NoVertPaddings_;
     list-style-type: disc;
     li{
-        margin: 0 auto 0.7em 2em;
+        margin: 0.5em 0 0 0.5em;
         list-style-position: outside;
         display: list-item;
         @extend %FullMaxWidth_;
         @extend %TextJustify_;
     
     }
+    
+    li::first-letter{
+        margin-left: 0em;
+    }
+}
+
+/**********  I C O N S **/
+.telephone, .mailto, .adress{
+    @extend %AsBlock_;
+   
+}
+
+.telephone::before{
+    content: url(./img/phone.svg);
+        margin-right: 0.1em;
+}
+
+.mailto::before{
+    content: url(./img/mailto.svg);
+    margin-right: 0.5em;
+    padding-top: 0.2em;
+}
+
+.adress::before{
+    content: url(./img/navigation.svg);
+    margin-right: 0.5em;
+    padding-top: 0.2em;
+}
+
+.telephone::before, .mailto::before, .adress::before{
+ vertical-align: -30%;
+}
+/**********
+G O O G L E  CARDS styling*/
+iframe{
+    @extend %FullWidth_;
+    @extend %AsBlock_;
+    @extend %FullMaxWidth_;
+    margin: 0;
+    height: auto;
+    
+}
+
+/////for expiriment
+
+.myD {
+
+  width:100px;
+  padding: 50px 0;
+  text-align: center;
+  background-color: red;
+  margin-top: 20px;
+  display: none;
+  z-index:10;
+  float: left;
 }
