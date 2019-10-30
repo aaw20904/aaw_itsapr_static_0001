@@ -6,9 +6,8 @@
     /*****limitting the width in depending to
     the broser`s width - like a rubber design*/ 
     @extend %AsBlock_;
-   
    // @extend %FullWidth_;
-   /* @extend %NoVertMargins_;*/
+   @extend %NoVertMargins_;
     @extend %HorizAutoMargins_;
     @extend %FullMaxWidth_;
     @extend %NoVertPaddings_;
@@ -16,7 +15,7 @@
     /***********MAX W I D T H   LIMIT  S E T  **/
   //  max-width: 1600px;
     /****for DBG**/
-       border: 2px dashed rgba(255,0,0,0.1);
+    //   border: 2px dashed rgba(255,0,0,0.1);
     &> div{
         /****for vertical align*/
         @extend %FullWidth_;
@@ -24,20 +23,27 @@
         @extend %VertAlign_;
         margin: 1em 0;
         max-width: 100%;
+        pading: 0;
          /****for DeBuG**/
-      border: 2px dashed rgba(0,255,0,0.1);
-        &> div{
+   //  border: 2px dashed rgba(0,255,0,0.1);
+        &>*{
             max-width: 100%;
             /**for horiz align*/
               width: auto;
             @extend %AsBlock_;
             @extend %TextCenter_;
-            margin: 0 1.5em;
+            margin: 0 1em;
              /****for DeBuG**/
-             border: 2px dashed rgba(0,0,255,0.1);
+          //    border: 2px dashed rgba(0,0,255,0.1);
             ////////////////////////////
             /***! PLACE content HERE!!*/
             ///////////////////////////
+        }
+        
+        &>*[id="contacts"]{
+            @media (max-width: 768px){
+                margin: 0;
+            }
         }
     }
 }
@@ -67,14 +73,14 @@ h1.General{
 h2.General{
     @extend %AsBlock_;
     @extend %TextCenter_;
-    font-size: 2.5em;
+    font-size: 3em;
     @extend %LineHeightStd_;
     font-weight: bold;
     letter-spacing: 0.1em;
      @include  RightLeftAuto;
     
     @media (min-width:768px) and (max-width:1024px){
-        font-size: 2.2em;
+        font-size: 2.5em;
          
     }
     
@@ -85,7 +91,7 @@ h2.General{
     }
     
     @media (max-width:479px){
-        font-size: 1.3em;
+        font-size: 1.4em;
         
     }
     
@@ -126,11 +132,11 @@ h4.General{
     font-weight: bold;
     @include  RightLeftAuto;
       @media (min-width:768px) and (max-width:1024px){
-        font-size: 1.4em;  
+        font-size: 1.3em;  
     }
     
      @media (min-width:480px) and (max-width:768px){
-        font-size: 1.2em;
+        font-size: 1.1em;
     }
    
     @media (max-width:479px){
@@ -139,11 +145,35 @@ h4.General{
     }
   
 }
-///////////general B U T T O N use as link
+
+////for the garantee`s conditions
+h5.General{
+    @extend %AsBlock_;
+    @extend %TextCenter_;
+    font-size: 1.2em;
+    font-style: oblique;
+    font-weight: bold;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    @media (min-width:768px) and (max-width:1024px){
+        font-size: 1.1em;  
+    }
+    
+    @media (min-width:480px) and (max-width:768px){
+        font-size: 1.0em;
+    }
+   
+    @media (max-width:479px){
+        font-size: 0.9em;    
+    }
+    
+}
+   ///////////general B U T T O N use as link
 .GeneralButtonLnk{
     @extend %TextNoDecor_;
     @extend %AsInline_;
-    padding: 1em 1em;
+    padding: 0.5em 1em;
+     border-radius: 5px;
     @extend %TextCenter_;
     border: 2px solid $GenerealButtonBorderColor;
     color: $GeneralButtonColor;
@@ -156,6 +186,21 @@ h4.General{
     
    
 }
+/////simple paragraph/////
+
+p.simple{
+   // @extend %TextJustify_;
+    @extend %AsInline_;
+    @extend %FullMaxWidth_;
+    @extend %FullWidth_;
+    @extend %NoHorizMargins_;
+    @extend %NoVertMargins_;
+    @extend %NoHorizPaddings_;
+    @extend %NoVertPaddings_;
+    
+    padding: 0.5em;
+}
+
 ///////////general ---- I M A G E --- ////////
 img.General{
         @extend %FullMaxWidth_;
@@ -175,29 +220,46 @@ img.General{
         width: 25vw;
     }
 }
+
+.img-support-trim-{
+    width:10vw;
+    @media (max-width:480px){
+        width: 25vw;
+    }
+}
+
+
 ////// VERTICAL ALIGNMENT  ////
 
 .VerticalAlignmentWrap{
     height: 100%;
     @extend %AsFlex_;
     align-items: center;
-    justify-content: center;
-   
+    justify-content: center;  
 }
 
 
 .general-bottom-margin-{
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
 }
 
 .general-top-margin-{
-    margin-bottom: 1em;
+    margin-top: 0.5em;
 }
 /////google - I C O N /////
  .material-icons.md-18{ 
     font-size: 32px;
     color: $NavMobileIconColor;
-     &:hover{
-         color: #f22;
-     }
     }
+
+//// A N C H O R S   - offseting
+
+:target {
+padding-top: 60px;
+margin-top: -60px;
+display: inline-block;}
+
+a{
+    cursor: pointer;
+}
+ 
